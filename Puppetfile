@@ -43,25 +43,80 @@ github "dnsmasq",     "2.0.1"
 github "foreman",     "1.2.0"
 github "gcc",         "2.2.1"
 github "git",         "2.7.9"
-github "go",          "2.1.0"
 github "homebrew",    "1.12.0"
 github "hub",         "1.4.1"
-github "inifile",     "1.1.1", :repo => "puppetlabs/puppetlabs-inifile"
-github "nginx",       "1.4.5"
 github "nodejs",      "4.0.1"
 github "openssl",     "1.0.0"
-github "phantomjs",   "2.4.0"
 github "pkgconfig",   "1.0.0"
-github "repository",  "2.4.1"
+github "repository",  "2.4.1", :repo => "jwmayfield/puppet-repository"
 github "ruby",        "8.5.2"
 github "stdlib",      "4.2.1", :repo => "puppetlabs/puppetlabs-stdlib"
 github "sudo",        "1.0.0"
 github "xquartz",     "1.2.1"
 
-# Optional/custom modules. There are tons available at
-# https://github.com/boxen.
-# github "elasticsearch", "2.7.2"
-# github "mysql",         "2.0.1"
-# github "postgresql",  "3.0.3"
-# github "redis",       "3.1.0"
-# github "sysctl",      "1.0.1"
+
+# NOTE: Items from old boxen setup.
+# NOTE: NOT going to carry all of these forward.
+#
+# github "autoconf",   "1.0.0"
+# github "dnsmasq",    "2.0.1"
+# github "foreman",     "1.2.0"
+# github "gcc",        "2.2.0"
+# github "git",        "2.7.0"
+# github "go",          "2.1.0"
+# github "homebrew",   "1.9.8"
+# github "hub",        "1.3.0"
+# github "inifile",     "1.1.1", :repo => "puppetlabs/puppetlabs-inifile"
+# github "mongodb",    "1.3.3"
+# github "nodejs",     "4.0.0"
+# github "openssl",    "1.0.0"
+# github "phantomjs",  "2.3.0"
+# github "pkgconfig",  "1.0.0"
+# github "ruby",       "8.1.7"
+# github "stdlib",     "4.2.1",  :repo => "puppetlabs/puppetlabs-stdlib"
+# github "sudo",       "1.0.0"
+# github "vagrant",    "3.1.1"
+# github "virtualbox", "1.0.13"
+# github "xquartz",    "1.2.1"
+# 
+# github "postgresql", "3.0.1"
+# mod    "mloberg/python",
+#   :git => "git://github.com/mloberg/puppet-python.git",
+#   :ref => "8cb6d99aad9faed6c57f4ead728a020ebf038ddf"
+# mod    "jwmayfield/repository",
+#   :git => "git://github.com/jwmayfield/puppet-repository.git",
+#   :ref => "516c4c659ec59fe046fddd0138b09486c7cf4f3b"
+# github "sysctl",     "1.0.1"
+# github "zeromq",     "1.0.0"
+# 
+# # Optional/custom modules. There are tons available at
+# # https://github.com/boxen.
+# 
+# mod    "zroger/autoenv",
+#   :git => "git://github.com/zroger/puppet-autoenv.git",
+#   :ref => "86a415d24f330cf996a84c010fe95fa28eaaf41b"
+# github "chrome",     "1.1.2"
+# github "dropbox",    "1.2.0"
+# github "firefox",    "1.2.1"
+# github "foreman",    "1.2.0"
+# github "geoip",      "1.0.0"
+# github "heroku",     "2.1.1"
+# github "hipchat",    "1.1.3"
+# github "iterm2",     "1.1.2"
+# github "lastpass",   "1.1.0",
+#   :repo => "dieterdemeyer/puppet-lastpass"
+# github "msrdc",      "0.0.3",
+#   :repo => "jwmayfield/puppet-msrdc"
+# github "mysql",      "1.2.1"
+# github "property_list_key", "0.1.0",
+#   :repo => "glarizza/puppet-property_list_key"
+# github "osx",        "2.7.0"
+# github "rdio",       "1.0.0"
+# github "skype",      "1.0.8"
+# github "sourcetree", "1.0.0"
+# github "tmux",       "1.0.2"
+# mod    "jwmayfield/vim",
+#   :git => "git://github.com/jwmayfield/puppet-vim.git",
+#   :ref => "22b1e1869bdae89cdc60660ebf570ffb60b3a6a1"
+# github "wget",       "1.0.1"
+# github "zsh",        "1.0.0"
