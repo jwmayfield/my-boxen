@@ -52,12 +52,26 @@ Service {
 Homebrew::Formula <| |> -> Package <| |>
 
 node default {
+  # core modules, needed for most things
   include git
   include hub
 
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {
     fail('Please enable full disk encryption and try again')
+  }
+
+  nodejs::version { 'v0.12.2': }
+  python::version { '3.4.3': }
+  ruby::version { '2.2.2': }
+
+  # common, useful packages
+  package {
+    [
+      'ack',
+      'findutils',
+      'gnu-tar'
+    ]:
   }
 
   file { "${boxen::config::srcdir}/our-boxen":
