@@ -60,7 +60,7 @@ node default {
     fail('Please enable full disk encryption and try again')
   }
 
-  file { "${boxen::config::srcdir}/our-boxen":
+  file { "${boxen::config::srcdir}/my-boxen":
     ensure => link,
     target => $boxen::config::repodir
   }
