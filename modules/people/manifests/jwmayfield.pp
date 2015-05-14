@@ -1,81 +1,77 @@
-require boxen::environment
-require homebrew
-require gcc
+class people::jwmayfield {
+  $my_username      = $::boxen_user
+  $my_dotfilesdir   = "${::boxen_srcdir}/dotfiles"
+  $my_homedir       = "/Users/${my_username}"
+  $my_statusdir     = '/private/var/db'
 
-Exec {
-  group       => 'staff',
-  logoutput   => on_failure,
-  user        => $boxen_user,
-
-  path => [
-    "${boxen::config::home}/rbenv/shims",
-    "${boxen::config::home}/rbenv/bin",
-    "${boxen::config::home}/rbenv/plugins/ruby-build/bin",
-    "${boxen::config::homebrewdir}/bin",
-    '/usr/bin',
-    '/bin',
-    '/usr/sbin',
-    '/sbin'
-  ],
-
-  environment => [
-    "HOMEBREW_CACHE=${homebrew::config::cachedir}",
-    "HOME=/Users/${::boxen_user}"
-  ]
-}
-
-File {
-  group => 'staff',
-  owner => $boxen_user
-}
-
-Package {
-  provider => homebrew,
-  require  => Class['homebrew']
-}
-
-Repository {
-  provider => git,
-  extra    => [
-    '--recurse-submodules'
-  ],
-  require  => File["${boxen::config::bindir}/boxen-git-credential"],
-  config   => {
-    'credential.helper' => "${boxen::config::bindir}/boxen-git-credential"
-  }
-}
-
-Service {
-  provider => ghlaunchd
-}
-
-Homebrew::Formula <| |> -> Package <| |>
-
-node default {
-  # core modules, needed for most things
-  include git
-  include hub
-
-  # fail if FDE is not enabled
-  if $::root_encrypted == 'no' {
-    fail('Please enable full disk encryption and try again')
+  git::config::global {
+    'user.email': value    => 'jason@jwmayfield.com' ;
+    'user.name':  value    => 'Jason Mayfield' ;
+    'color.ui':   value    => 'auto' ;
+    'format.pretty': value => 'format:%C(yellow)%h%Creset -%C(red)%d%Creset %s %C(bold green)(%ar) %C(cyan)<%an>%Creset' ;
+    'merge.tool': value    => 'vimdiff' ;
+    'push.default': value  => 'simple' ;
   }
 
-  nodejs::version { 'v0.12.2': }
-  python::version { '3.4.3': }
-  ruby::version { '2.2.2': }
-
-  # common, useful packages
-  package {
-    [
-      'ack',
-      'findutils',
-      'gnu-tar'
-    ]:
+  # Hg config
+  file { "${my_homedir}/.hgext":
+    ensure  => link,
+    target  => "${my_dotfilesdir}/hgext",
+    require => [
+      Repository[$my_dotfilesdir]
+    ]
+  }
+  file { "${my_homedir}/.hgrc":
+    ensure  => link,
+    target  => "${my_dotfilesdir}/hgrc",
+    require => [
+      Repository[$my_dotfilesdir]
+    ]
   }
 
-  file { "${boxen::config::srcdir}/our-boxen":
-    ensure => link,
-    target => $boxen::config::repodir
+  # Slate window manager
+  file { "${my_homedir}/.slate":
+    ensure  => link,
+    target  => "${my_dotfilesdir}/slate",
+    require => Repository[$my_dotfilesdir]
   }
+
+  # vim config
+  file { $vim::vimrc:
+    ensure  => link,
+    target  => "${my_dotfilesdir}/vimrc",
+    require => Repository[$my_dotfilesdir]
+  }
+
+  vim::bundle { [
+    'altercation/vim-colors-solarized',
+  ]: }
+
+  repository { $my_dotfilesdir:
+    ensure => 'master',
+    force  => true,
+    source => 'jwmayfield/dotfiles'
+  }
+
+  file { $my_statusdir:
+    ensure  => directory,
+    owner   => 'root',
+    group   => 'wheel',
+    require => Repository[$my_dotfilesdir]
+  }
+  exec { 'Enable accessibility API':
+    command  => "(echo -n 'a' | sudo tee ${my_statusdir}/.AccessibilityAPIEnabled > /dev/null 2>&1) && chmod 644 ${my_statusdir}/.AccessibilityAPIEnabled",
+    creates  => "${my_statusdir}/.AccessibilityAPIEnabled",
+    provider => shell,
+    user     => root,
+    require  => File[$my_statusdir]
+  }
+  exec { 'Customize Terminal.app':
+    command  => "bash ${my_dotfilesdir}/osx && touch ${my_statusdir}/.customize-terminal",
+    creates  => "${my_statusdir}/.customize-terminal",
+    provider => shell,
+    user     => root,
+    require  => File[$my_statusdir]
+  }
+
 }
