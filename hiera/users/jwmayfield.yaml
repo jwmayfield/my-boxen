@@ -1,6 +1,7 @@
 ---
 boxen::personal::homebrew_packages:
   - ag
+  - mercurial
   - python3
   - vim
   - zsh
