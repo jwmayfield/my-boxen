@@ -9,6 +9,7 @@ boxen::personal::homebrew_packages:
 
 boxen::personal::osx_apps:
   - dropbox
+  - flash
   - google-chrome
   - silverlight
   - slate
