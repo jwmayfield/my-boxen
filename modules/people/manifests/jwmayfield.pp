@@ -37,7 +37,7 @@ class people::jwmayfield {
   }
 
   # vim config
-  file { $vim::vimrc:
+  file { "${my_homedir}/.vimrc":
     ensure  => link,
     target  => "${my_dotfilesdir}/vimrc",
     require => Repository[$my_dotfilesdir]

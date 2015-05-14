@@ -39,20 +39,30 @@ github "module_data", "0.0.3", :repo => "ripienaar/puppet-module-data"
 # some/most of these if you want, but it's not recommended.
 
 github "brewcask",    "0.0.6"
+mod    "fonts",
+  :git => "https://github.com/jwmayfield/puppet-fonts.git",
+  :ref => "HEAD"
 github "foreman",     "1.2.0"
 github "gcc",         "2.2.1"
 github "git",         "2.7.9"
 github "homebrew",    "1.12.0"
 github "hub",         "1.4.1"
-github "inifile",     "1.1.1", :repo => "puppetlabs/puppetlabs-inifile"
+github "inifile",     "1.1.1",
+  :repo => "puppetlabs/puppetlabs-inifile"
 github "nodejs",      "4.0.1"
 github "openssl",     "1.0.0"
+github "osx",         "2.8.0"
 github "pkgconfig",   "1.0.0"
-github "python",      "3.0.0", :repo => "mloberg/puppet-python"
-github "repository",  "2.4.1", :repo => "jwmayfield/puppet-repository"
+github "python",      "3.0.0",
+  :repo => "mloberg/puppet-python"
+mod    "repository",
+  :git => "https://github.com/jwmayfield/puppet-repository.git",
+  :ref => "HEAD"
 github "ruby",        "8.5.2"
-github "stdlib",      "4.2.1", :repo => "puppetlabs/puppetlabs-stdlib"
+github "stdlib",      "4.2.1",
+  :repo => "puppetlabs/puppetlabs-stdlib"
 github "sudo",        "1.0.0"
+github "vim",         "1.0.5"
 github "xquartz",     "1.2.1"
 
 

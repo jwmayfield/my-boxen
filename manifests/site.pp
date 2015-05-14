@@ -52,6 +52,7 @@ Service {
 Homebrew::Formula <| |> -> Package <| |>
 
 node default {
+  include fonts::mplus
   include git
   include hub
 
