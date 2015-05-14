@@ -25,6 +25,14 @@ class people::jwmayfield::shell {
     require  => File[$status]
   }
 
+  file { "${home}/.aliases":
+    ensure  => link,
+    target  => "${dotfiles}/aliases",
+    require => [
+      Repository[$dotfiles]
+    ]
+  }
+
   file { "${home}/.hgext":
     ensure  => link,
     target  => "${dotfiles}/hgext",

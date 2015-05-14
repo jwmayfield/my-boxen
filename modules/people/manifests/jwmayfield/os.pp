@@ -11,7 +11,6 @@ class people::jwmayfield::os {
   include osx::finder::show_hidden_files
   include osx::finder::enable_quicklook_text_selection
   include osx::finder::show_warning_before_emptying_trash
-  include osx::finder::show_warning_before_changing_an_extension
   include osx::finder::show_all_filename_extensions
   include osx::finder::no_file_extension_warnings
 
