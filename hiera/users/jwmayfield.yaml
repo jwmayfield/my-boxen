@@ -1,7 +1,4 @@
 ---
-nodejs::global::version: "v0.12.2"
-python::global::version: "3.4.3"
-ruby::global::version: "2.2.2"
 ruby::provider: "chruby"
 
 boxen::personal::homebrew_packages:
