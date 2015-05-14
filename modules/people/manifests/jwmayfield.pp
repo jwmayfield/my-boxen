@@ -1,4 +1,6 @@
 class people::jwmayfield {
+  include people::jwmayfield::zsh
+
   $my_username      = $::boxen_user
   $my_dotfilesdir   = "${::boxen_srcdir}/dotfiles"
   $my_homedir       = "/Users/${my_username}"
