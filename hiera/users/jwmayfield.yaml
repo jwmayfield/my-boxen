@@ -13,3 +13,9 @@ boxen::personal::osx_apps:
   - google-chrome
   - silverlight
   - slate
+
+people::jwmayfield::alt_apps:
+  - firefoxdeveloperedition
+
+people::jwmayfield::fonts:
+  - font-m-plus

@@ -39,9 +39,6 @@ github "module_data", "0.0.3", :repo => "ripienaar/puppet-module-data"
 # some/most of these if you want, but it's not recommended.
 
 github "brewcask",    "0.0.6"
-mod    "fonts",
-  :git => "https://github.com/jwmayfield/puppet-fonts.git",
-  :ref => "HEAD"
 github "gcc",         "2.2.1"
 github "git",         "2.7.9"
 github "homebrew",    "1.12.0"

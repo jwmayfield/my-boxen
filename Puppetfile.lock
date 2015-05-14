@@ -1,11 +1,4 @@
 GIT
-  remote: https://github.com/jwmayfield/puppet-fonts.git
-  ref: HEAD
-  sha: d99efd09ec2cd88c70d2993eb6369671f719db60
-  specs:
-    fonts (0.0.1)
-
-GIT
   remote: https://github.com/jwmayfield/puppet-repository.git
   ref: HEAD
   sha: e87404fc4036ddec2d5240761ee631c81012eacd
@@ -95,7 +88,6 @@ GITHUBTARBALL
 DEPENDENCIES
   boxen (= 3.10.4)
   brewcask (= 0.0.6)
-  fonts (>= 0)
   gcc (= 2.2.1)
   git (= 2.7.9)
   homebrew (= 1.12.0)
