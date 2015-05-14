@@ -61,9 +61,7 @@ node default {
     fail('Please enable full disk encryption and try again')
   }
 
-  # nodejs::global::version: "v0.12.2"
-  # python::global::version: "3.4.3"
-  ruby::local { "/Users/${::boxen_user}": version => '2.2.2' }
+  class { 'nodejs::global': version => 'v0.12.2' }
 
   file { "${boxen::config::srcdir}/my-boxen":
     ensure => link,

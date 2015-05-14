@@ -1,9 +1,10 @@
 ---
-ruby::provider: "chruby"
-
 boxen::personal::homebrew_packages:
+  - ag
+  - python3
   - vim
   - zsh
+  - zsh-lovers
 
 boxen::personal::osx_apps:
   - silverlight

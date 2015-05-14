@@ -4,7 +4,7 @@ class people::jwmayfield::vim {
 
   # vim config
   file { "${home}/.vimrc":
-    ensure  => symlink,
+    ensure  => link,
     target  => "${dotfiles}/vimrc",
     require => Repository[$dotfiles]
   }

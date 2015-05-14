@@ -23,11 +23,6 @@ GITHUBTARBALL
     brewcask (0.0.6)
 
 GITHUBTARBALL
-  remote: boxen/puppet-foreman
-  specs:
-    foreman (1.2.0)
-
-GITHUBTARBALL
   remote: boxen/puppet-gcc
   specs:
     gcc (2.2.1)
@@ -68,11 +63,6 @@ GITHUBTARBALL
     pkgconfig (1.0.0)
 
 GITHUBTARBALL
-  remote: boxen/puppet-ruby
-  specs:
-    ruby (8.5.2)
-
-GITHUBTARBALL
   remote: boxen/puppet-sudo
   specs:
     sudo (1.0.0)
@@ -86,11 +76,6 @@ GITHUBTARBALL
   remote: boxen/puppet-xquartz
   specs:
     xquartz (1.2.1)
-
-GITHUBTARBALL
-  remote: mloberg/puppet-python
-  specs:
-    python (3.0.0)
 
 GITHUBTARBALL
   remote: puppetlabs/puppetlabs-inifile
@@ -111,7 +96,6 @@ DEPENDENCIES
   boxen (= 3.10.4)
   brewcask (= 0.0.6)
   fonts (>= 0)
-  foreman (= 1.2.0)
   gcc (= 2.2.1)
   git (= 2.7.9)
   homebrew (= 1.12.0)
@@ -122,9 +106,7 @@ DEPENDENCIES
   openssl (= 1.0.0)
   osx (= 2.8.0)
   pkgconfig (= 1.0.0)
-  python (= 3.0.0)
   repository (>= 0)
-  ruby (= 8.5.2)
   stdlib (= 4.2.1)
   sudo (= 1.0.0)
   vim (= 1.0.5)
