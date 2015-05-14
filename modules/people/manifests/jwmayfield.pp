@@ -1,4 +1,5 @@
 class people::jwmayfield {
+  include people::jwmayfield::os
   include people::jwmayfield::shell
   include people::jwmayfield::vim
 

@@ -7,5 +7,6 @@ boxen::personal::homebrew_packages:
   - zsh-lovers
 
 boxen::personal::osx_apps:
+  - dropbox
   - silverlight
   - slate
