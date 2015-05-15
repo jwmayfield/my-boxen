@@ -30,9 +30,4 @@ class people::jwmayfield (
     'provider'        => 'brewcask',
     require           => Homebrew::Tap['caskroom/fonts']
   })
-
-  exec { 'Install EngineYard gem':
-    command => 'sudo gem install engineyard',
-    unless  => 'gem list | grep -c engineyard'
-  }
 }
