@@ -8,6 +8,7 @@ boxen::personal::homebrew_packages:
   - zsh-lovers
 
 boxen::personal::osx_apps:
+  - chefdk
   - dropbox
   - flash
   - google-chrome
