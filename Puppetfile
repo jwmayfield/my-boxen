@@ -55,6 +55,7 @@ mod    "repository",
 github "stdlib",      "4.2.1",
   :repo => "puppetlabs/puppetlabs-stdlib"
 github "sudo",        "1.0.0"
+github "vagrant",     "3.3.0"
 github "vim",         "1.0.5"
 github "xquartz",     "1.2.1"
 

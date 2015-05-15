@@ -61,6 +61,11 @@ GITHUBTARBALL
     sudo (1.0.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-vagrant
+  specs:
+    vagrant (3.3.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-vim
   specs:
     vim (1.0.5)
@@ -101,6 +106,7 @@ DEPENDENCIES
   repository (>= 0)
   stdlib (= 4.2.1)
   sudo (= 1.0.0)
+  vagrant (= 3.3.0)
   vim (= 1.0.5)
   xquartz (= 1.2.1)
 

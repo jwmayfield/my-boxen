@@ -3,6 +3,7 @@ class people::jwmayfield (
   $fonts    = []
 ){
   include brewcask
+  include people::jwmayfield::development
   include people::jwmayfield::os
   include people::jwmayfield::shell
   include people::jwmayfield::vim

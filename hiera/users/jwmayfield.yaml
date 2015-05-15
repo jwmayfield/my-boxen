@@ -13,6 +13,7 @@ boxen::personal::osx_apps:
   - google-chrome
   - silverlight
   - slate
+  - vmware-fusion
 
 people::jwmayfield::alt_apps:
   - firefoxdeveloperedition
