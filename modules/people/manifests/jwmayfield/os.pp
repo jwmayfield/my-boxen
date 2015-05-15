@@ -20,4 +20,12 @@ class people::jwmayfield::os {
   include osx::software_update
 
   class { 'osx::sound::interface_sound_effects': enable => false }
+
+  boxen::osx_defaults { 'enable duckduckgo':
+    ensure => present,
+    domain => 'com.apple.Safari',
+    key    => 'SearchProviderIdentifier',
+    value  => 'com.duckduckgo',
+    user   => $::boxen_user
+  }
 }
