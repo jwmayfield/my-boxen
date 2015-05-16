@@ -24,4 +24,4 @@ ENV['BOXEN_ISSUES_ENABLED'] = nil
 # required for Github Enterprise (defaults to "https://github.com/%s")
 # ENV['BOXEN_REPO_URL_TEMPLATE'] = 'https://github.yourdomain.com/%s'
 
-ENV['BOXEN_SRC_DIR'] = "#{ENV['HOME']}/src"
+ENV['BOXEN_SRC_DIR'] = "#{ENV['HOME']}/Code"

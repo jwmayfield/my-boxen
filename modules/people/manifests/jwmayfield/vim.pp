@@ -14,6 +14,7 @@ class people::jwmayfield::vim {
     'kien/ctrlp.vim',
     'rodjek/vim-puppet',
     'scrooloose/syntastic',
-    'tomtom/tcomment_vim'
+    'tomtom/tcomment_vim',
+    'vim-ruby/vim-ruby'
   ]: }
 }
