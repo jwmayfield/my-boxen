@@ -17,10 +17,13 @@ class people::jwmayfield::vim {
   vim::bundle { [
     'altercation/vim-colors-solarized',
     'editorconfig/editorconfig-vim',
+    'ervandew/supertab',
     'kien/ctrlp.vim',
     'rodjek/vim-puppet',
     'scrooloose/syntastic',
     'tomtom/tcomment_vim',
+    'tpope/vim-endwise',
+    'tpope/vim-sensible',
     'vim-ruby/vim-ruby'
   ]: }
 }
