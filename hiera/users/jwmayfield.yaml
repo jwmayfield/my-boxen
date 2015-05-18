@@ -9,6 +9,7 @@ boxen::personal::homebrew_packages:
 boxen::personal::osx_apps:
   - chefdk
   - dropbox
+  - evernote
   - flash
   - google-chrome
   - silverlight
