@@ -4,7 +4,6 @@ boxen::personal::homebrew_packages:
   - python3
   - the_silver_searcher
   - vim
-  - zsh
   - zsh-lovers
 
 boxen::personal::osx_apps:

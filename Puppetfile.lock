@@ -76,6 +76,11 @@ GITHUBTARBALL
     xquartz (1.2.1)
 
 GITHUBTARBALL
+  remote: boxen/puppet-zsh
+  specs:
+    zsh (1.0.0)
+
+GITHUBTARBALL
   remote: puppetlabs/puppetlabs-inifile
   specs:
     inifile (1.1.1)
@@ -109,4 +114,5 @@ DEPENDENCIES
   vagrant (= 3.3.0)
   vim (= 1.0.5)
   xquartz (= 1.2.1)
+  zsh (= 1.0.0)
 

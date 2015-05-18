@@ -6,6 +6,8 @@ class people::jwmayfield::shell {
   $status   = '/private/var/db'
   $zprezto  = "${home}/.zprezto"
 
+  include zsh
+
   repository { $dotfiles:
     ensure => 'master',
     force  => true,

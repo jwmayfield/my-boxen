@@ -58,6 +58,7 @@ github "sudo",        "1.0.0"
 github "vagrant",     "3.3.0"
 github "vim",         "1.0.5"
 github "xquartz",     "1.2.1"
+github "zsh",         "1.0.0"
 
 
 # NOTE: Items from old boxen setup.
