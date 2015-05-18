@@ -3,6 +3,7 @@ class people::jwmayfield::os {
   include osx::global::expand_save_dialog
   include osx::global::tap_to_click
 
+  include osx::dock::autohide
   include osx::dock::clear_dock
   include osx::dock::disable
 
