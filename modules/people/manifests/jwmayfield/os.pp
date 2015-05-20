@@ -73,22 +73,4 @@ class people::jwmayfield::os {
     value  => 'com.duckduckgo',
     user   => $::boxen_user
   }
-
-  boxen::osx_defaults { 'Screen saver: require password':
-    ensure => present,
-    domain => 'com.apple.screensaver',
-    key    => 'askForPassword',
-    type   => 'int',
-    value  => 1,
-    user   => $::boxen_user
-  }
-
-  boxen::osx_defaults { 'Screen saver: require password immediately':
-    ensure => present,
-    domain => 'com.apple.screensaver',
-    key    => 'askForPasswordDelay',
-    type   => 'int',
-    value  => 0,
-    user   => $::boxen_user
-  }
 }
