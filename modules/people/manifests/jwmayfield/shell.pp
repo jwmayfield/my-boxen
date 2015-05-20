@@ -9,7 +9,7 @@ class people::jwmayfield::shell {
   include zsh
 
   repository { $dotfiles:
-    ensure => 'master',
+    ensure => 'origin/HEAD',
     force  => true,
     source => 'jwmayfield/dotfiles'
   }
