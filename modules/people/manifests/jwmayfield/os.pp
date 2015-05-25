@@ -20,6 +20,7 @@ class people::jwmayfield::os {
   include osx::no_network_dsstores
   include osx::software_update
 
+  osx::recovery_message { 'DESTRUCT!': }
   class { 'osx::sound::interface_sound_effects': enable => false }
 
   boxen::osx_defaults { 'Check for updates daily':
