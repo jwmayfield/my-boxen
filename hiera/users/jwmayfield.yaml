@@ -7,11 +7,13 @@ boxen::personal::homebrew_packages:
   - zsh-lovers
 
 boxen::personal::osx_apps:
+  - 0xdbe-eap
   - chefdk
   - dropbox
   - evernote
   - flash
   - google-chrome
+  - java
   - silverlight
   - slate
   - vmware-fusion
