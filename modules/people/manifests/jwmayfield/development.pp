@@ -4,6 +4,7 @@ class people::jwmayfield::development {
   class { 'vagrant': completion => true }
 
   vagrant::plugin { 'berkshelf': }
+  vagrant::plugin { 'exec': }
   vagrant::plugin { 'vmware-fusion':
     license => "file:///${home}/Dropbox/Licenses/vagrant-vmware-fusion.lic"
   }
