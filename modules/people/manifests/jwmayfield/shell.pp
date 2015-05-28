@@ -69,6 +69,15 @@ class people::jwmayfield::shell {
     require => Repository[$dotfiles]
   }
 
+  file { "${home}/.zprezto/modules/prompt/functions/prompt_jwmayfield_setup":
+    ensure  => link,
+    target  => "${runcoms}/prompt_jwmayfield_setup",
+    require => [
+      Repository[$dotfiles],
+      Repository[$zprezto]
+    ]
+  }
+
   file { "${home}/.zpreztorc":
     ensure  => link,
     target  => "${runcoms}/zpreztorc",
