@@ -1,5 +1,6 @@
 ---
 boxen::personal::homebrew_packages:
+  - direnv
   - mercurial
   - python3
   - the_silver_searcher
