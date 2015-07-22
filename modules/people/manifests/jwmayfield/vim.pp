@@ -50,6 +50,7 @@ class people::jwmayfield::vim {
     'ervandew/supertab',
     'kien/ctrlp.vim',
     'rodjek/vim-puppet',
+    'rust-lang/rust.vim',
     'scrooloose/syntastic',
     'tomtom/tcomment_vim',
     'tpope/vim-endwise',
